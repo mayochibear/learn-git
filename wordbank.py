@@ -46,9 +46,11 @@ def dice_game(number: int) -> str:
 
      dice = [randint(1,6) for num in range(number)]
 
-     for die in range(number):
-          for dices in dice_art.get(dice[die]):
-               print(dices)
+     for line in range(5):   # each die has 5 lines
+          for face in dice:   # loop through each die value
+               print(dice_art[face][line], end="  ")  # print that die's line
+          print()  # move to next output line
+
 
      total = sum(dice)
      
